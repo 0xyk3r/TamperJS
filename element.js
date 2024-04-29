@@ -1,4 +1,7 @@
 window.TamperJS = window.TamperJS || {};
+const scriptUrl = document.currentScript.src;
+
+console.log("TamperJS", scriptUrl);
 
 /**
  * 观察与给定选择器匹配的元素的创建，并在找到元素时执行回调函数。
