@@ -1,3 +1,9 @@
+console.log(
+  "%cTamperJS%cTamperJS Loaded",
+  "background-color: gold; color: black; padding: 5px;",
+  "background-color: black; color: gold; padding: 5px;"
+);
+
 window.TamperJS = {
   element: {
     /**
