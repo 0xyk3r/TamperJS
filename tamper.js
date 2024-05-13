@@ -30,7 +30,7 @@ window.TamperJS = {
       const executeTask = async (task) => {
         if (task.type === 'timer') {
           await new Promise((resolve) => setTimeout(resolve, task.delay));
-        } else if (typeof task.type === "handler" && task.selector && task.condition && task.callback) {
+        } else if (task.type === "handler" && task.selector && task.condition && task.callback) {
           const intervalId = setInterval(() => {
             const element = document.querySelector(task.selector);
             if (element && task.condition(element)) {
