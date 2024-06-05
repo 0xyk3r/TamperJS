@@ -21,6 +21,27 @@ window.TamperJS = {
   },
 
   /**
+   * 观察与给定选择器匹配的元素，并在指定时机执行回调函数。
+   * @param {*} selector  要匹配的元素的 CSS 选择器。
+   * @param {*} config  观察选项
+   * @param {*} callback  指定时机要执行的回调函数。
+   * @returns 
+   */
+  observerElement: (selector, config, callback) => {
+      const element = document.querySelector(selector);
+      if (!element) {
+          console.warn(`Element with selector "${selector}" not found.`);
+          return;
+      }
+      // 创建一个观察器实例并传入回调函数
+      const observer = new MutationObserver(callback);
+      // 传入目标节点和观察选项
+      observer.observe(element, config);
+      // 返回观察器实例，以便可以在外部停止观察
+      return observer;
+  },
+
+  /**
    * 执行任务队列
    * @param {*} taskQueue 
    * @returns 
