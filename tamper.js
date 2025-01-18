@@ -22,7 +22,7 @@ window.TamperJS = {
 
   /**
    * 观察与给定选择器匹配的元素，并在指定时机执行回调函数。
-   * @param {*} selector  要匹配的元素的 CSS 选择器。
+   * @param {*} selector  要匹配元素的 CSS 选择器。
    * @param {*} config  观察选项
    * @param {*} callback  指定时机要执行的回调函数。
    * @returns 
