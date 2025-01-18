@@ -7,7 +7,7 @@ console.log(
 window.TamperJS = {
   /**
    * 观察与给定选择器匹配的元素，并在找到元素时执行回调函数。
-   * @param {string} selector - 要匹配的元素的 CSS 选择器。
+   * @param {string} selector - 要匹配元素的 CSS 选择器。
    * @param {Function} callback - 找到元素时要执行的回调函数。
    */
   observeElementExist: (selector, callback) => {
